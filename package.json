@@ -1,9 +1,31 @@
 {
   "name": "react-native-openlayers",
+  "displayName": "React Native Openlayers",
   "version": "0.0.0",
   "description": "Openlayers components for React Native",
+  "license": "MIT",
+  "author": {
+    "name": "Daomtthuan",
+    "email": "daomtthuan@gmail.com",
+    "url": "https://github.com/daomtthuan"
+  },
   "main": "index.ts",
-  "repository": "https://github.com/daomtthuan/react-native-openlayers.git",
-  "author": "Daomtthuan <daomtthuan@gmail.com>",
-  "license": "MIT"
+  "dependencies": {},
+  "devDependencies": {},
+  "bugs": {
+    "email": "daomtthuan@gmail.com",
+    "url": "https://github.com/daomtthuan/react-native-openlayers/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daomtthuan/react-native-openlayers.git"
+  },
+  "readme": "https://github.com/daomtthuan/react-native-openlayers/blob/main/README.md",
+  "contributors": [
+    {
+      "name": "Daomtthuan",
+      "email": "daomtthuan@gmail.com",
+      "url": "https://github.com/daomtthuan"
+    }
+  ]
 }
