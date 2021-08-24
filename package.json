@@ -1,0 +1,9 @@
+{
+  "name": "react-native-openlayers",
+  "version": "0.0.0",
+  "description": "Openlayers components for React Native",
+  "main": "index.ts",
+  "repository": "https://github.com/daomtthuan/react-native-openlayers.git",
+  "author": "Daomtthuan <daomtthuan@gmail.com>",
+  "license": "MIT"
+}
