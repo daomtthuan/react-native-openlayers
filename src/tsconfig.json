@@ -4,7 +4,7 @@
     "module": "CommonJS",
     "moduleResolution": "Node",
     "jsx": "react-native",
-    "lib": ["ES2017"],
+    "lib": ["ESNext"],
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
@@ -12,11 +12,7 @@
     "noEmit": true,
     "resolveJsonModule": true,
     "skipLibCheck": false,
-    "strict": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "strict": true
   },
   "exclude": ["node_modules", "babel.config.js", "metro.config.js", "react-native.config.js", "webpack.config.js"]
 }
