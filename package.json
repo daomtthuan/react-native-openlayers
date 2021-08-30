@@ -1,7 +1,7 @@
 {
   "name": "react-native-openlayers",
   "displayName": "React Native Openlayers",
-  "version": "0.0.0-pre",
+  "version": "0.1.0-pre",
   "description": "Openlayers components for React Native",
   "author": "Daomtthuan <daomtthuan@gmail.com> (https://github.com/daomtthuan)",
   "main": "./lib/index.ts",
