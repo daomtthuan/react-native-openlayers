@@ -1,8 +1,21 @@
 # Changelog
 
-## [0.0.0-pre] - 2021-08-30
+## [v0.0.0-pre] - 2021-08-30
 
 ### Added
 
 - Init project
 - Add container for component
+
+## [v0.1.0-pre] - 2021-09-05
+
+### Added
+
+- Add `id` property to target map when rendering
+- Add `render` property
+- Add `onMessage` property to handle messages when use `postMessage` in `render` or `postAction`
+- Add `postAction` method in ref component
+
+### Removed
+
+- Remove `sourceConfig` property
