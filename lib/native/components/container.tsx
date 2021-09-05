@@ -1,7 +1,7 @@
 import { Map } from 'ol';
 import React, { forwardRef, ForwardRefExoticComponent, useImperativeHandle, useRef } from 'react';
 import { StyleSheet, View, ViewStyle } from 'react-native';
-import { WebView } from 'react-native-webview';
+import { WebView, WebViewMessageEvent } from 'react-native-webview';
 
 import { WebSource } from '../../web/components/source';
 import { Message, PostMessage } from '../types/webview';
@@ -9,7 +9,7 @@ import { Message, PostMessage } from '../types/webview';
 export type NativeContainerProps = {
   id: string;
   render: (postMessage: PostMessage) => Map;
-  onMessage: (message: Message) => void;
+  onMessage?: (message: Message) => void;
   containerStyle?: ViewStyle;
 };
 
@@ -25,7 +25,13 @@ export const NativeContainer: ForwardRefExoticComponent<NativeContainerProps & R
     window.ReactNativeOpenlayers.map = (${props.render.toString()})((message) => window.ReactNativeOpenlayers.postMessage(message));
   `;
 
-  console.log(injectedRenderMapScript);
+  const handleOnMessage = (event: WebViewMessageEvent) => {
+    if (!props.onMessage) {
+      return;
+    }
+
+    props.onMessage(JSON.parse(event.nativeEvent.data) as Message);
+  };
 
   useImperativeHandle(ref, () => ({
     postAction: (action) => {
@@ -43,7 +49,7 @@ export const NativeContainer: ForwardRefExoticComponent<NativeContainerProps & R
         source={{
           html: WebSource({ id: props.id }),
         }}
-        onMessage={(event) => props.onMessage(JSON.parse(event.nativeEvent.data) as Message)}
+        onMessage={handleOnMessage}
         injectedJavaScript={injectedRenderMapScript}
       />
     </View>
